@@ -1,0 +1,21 @@
+<%- include("../partials/head") %>
+
+<body>
+    <h1>Edit New Cars</h1>
+    <form action="/cars/edit/<%= carsDetail.id %>" method="POST">
+        <label for="">Nama</label>
+        <input type="text" name="nama" placeholder=" " value="<%= carsDetail.nama %>"><br>
+        <label for="">Harga</label>
+        <input type="text" name="harga" placeholder=" " value="<%= carsDetail.harga %>"><br>
+        <label for="">Ukuran</label>
+         <select name="ukuran" id="">
+            <% ukuranOptions.map((ukuran) => { %>
+                <option value="<%= ukuran %>" <%  if(ukuran == carsDetail.ukuran){ %> selected <% } %> ><%= ukuran %></option> 
+            <% }) %>
+        </select><br>
+        <label for="">Image</label>
+        <input type="file" name="image"><br>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>

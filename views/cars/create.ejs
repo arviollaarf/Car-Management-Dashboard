@@ -1,0 +1,17 @@
+<%- include("../partials/head") %>
+
+<body>
+    <h1>Add New Cars</h1>
+    <form action="/cars" method="POST">
+        <label for="">Nama</label>
+        <input type="text" name="nama" placeholder=" "><br>
+        <label for="">Harga</label>
+        <input type="text" name="harga" placeholder=" "><br>
+        <label for="">Ukuran</label>
+        <input type="text" name="ukuran" placeholder=" "><br>
+        <label for="">Image</label>
+        <input type="file" name="image"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
